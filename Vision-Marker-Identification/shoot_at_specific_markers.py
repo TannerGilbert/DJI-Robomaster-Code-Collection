@@ -1,0 +1,13 @@
+def start():
+    robot_ctrl.set_mode(rm_define.robot_mode_free)
+    gimbal_ctrl.set_rotate_speed(180)
+    vision_ctrl.enable_detection(rm_define.vision_detection_marker)
+    vision_ctrl.detect_marker_and_aim(rm_define.marker_number_one)
+    gun_ctrl.fire_once()
+    time.sleep(0.2)
+    vision_ctrl.detect_marker_and_aim(rm_define.marker_number_two)
+    gun_ctrl.fire_once()
+    time.sleep(0.2)
+    vision_ctrl.detect_marker_and_aim(rm_define.marker_number_three)
+    gun_ctrl.fire_once()
+    time.sleep(0.2)
